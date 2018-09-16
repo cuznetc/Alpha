@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Furore', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    src: url('../fonts/Furore.woff2') format('woff2');
+    src: url('../fonts/Furore.woff') format('woff');
+    src: url('../fonts/Furore.ttf') format('truetype');
+    src: url('../fonts/Furore.eot');
+    src: url('../fonts/Furore.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -52,7 +63,10 @@ body {
     min-width: 250px;
     width: 20%;
     height: 232px;
+<<<<<<< HEAD
     overflow: hidden;
+=======
+>>>>>>> 18560dae50079784f5e198fc7ad3c6c7850b1dcd
 }
 
 .block {
