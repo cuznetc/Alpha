@@ -9,4 +9,14 @@ jQuery(document).ready(function() {
   console.log(msg);
 
 
+  //add gallery bg
+  $('.gallery .block a').each(function() {
+    var imageURL = $(this).attr('href');
+    if(imageURL){
+      $(this).parent().css("background-image", "url('"+imageURL+"')");
+      $(this).hide();
+    }
+  });
+
+
 });

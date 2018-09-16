@@ -51,21 +51,32 @@
 /* Блоки */
 
 .block {
+<<<<<<< HEAD
     width: 35%;
     height: 25%;
+=======
+    min-width: 250px;
+    width: 20%;
+    height: 232px;
+>>>>>>> e7b952a30ba7fa3f42cb3e01cfd2f63e81e2fa15
+}
+
+.block {
+  background-size: cover;
+  background-position: 50%;
 }
 
 .block:hover {
     opacity: 0.5;
 }
 
-.block:nth-child(1) {
+/*.block:nth-child(1) {
     background: url(../images/01.jpg) 100% 100% no-repeat;
-}
+}*/
 
-.block:nth-child(2) {
+/*.block:nth-child(2) {
     background: url(../images/02.jpg) 100% 100% no-repeat;
-}
+}*/
 
 .block:nth-child(3) {
     background: url(../images/03.jpg) 100% 100% no-repeat;
@@ -123,7 +134,7 @@
 
 /* iPad */
 
-@media (max-width: 1024px) {  
+@media (max-width: 1024px) {
     .block {
         width: 25%;
     }
@@ -133,21 +144,17 @@
     body {
         overflow: scroll;
     }
-    
+
     #header {
         height: auto;
     }
-    
+
     #header > ul {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .block {
         width: 50%;
     }
 }
-
-
-
-
