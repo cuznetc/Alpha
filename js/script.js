@@ -34,9 +34,10 @@ jQuery(document).ready(function() {
     $('#modalText').html(modalinfo);
   });
 
-  $('#gallery-modal .close').on('click', function() {
+  $('#gallery-modal .close').on('click', function(e) {
     $('#overlay').hide();
     $('#gallery-modal').hide();
+    e.preventDefault();
   });
 
   $('#overlay').on('click', function() {
