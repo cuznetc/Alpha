@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
+    transition: .3s;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* Меню */
+
+#header {
+    width: 100%;
+    height: 56px;
+    background: #ec2e2e;
+}
+
+#header > ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#header > ul > li > a {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f2f2f2;
+    padding: 17px;
+}
+
+#header > ul > li > a:hover {
+    background: #fff;
+    color: #000;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Блоки */
+
+.block {
+    width: 384px;
+    height: 232px;
+}
+
+.block:hover {
+    opacity: 0.5;
+}
+
+.block:nth-child(1) {
+    background: url(../images/01.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(2) {
+    background: url(../images/02.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(3) {
+    background: url(../images/03.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(4) {
+    background: url(../images/04.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(5) {
+    background: url(../images/05.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(6) {
+    background: url(../images/06.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(7) {
+    background: url(../images/07.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(8) {
+    background: url(../images/08.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(9) {
+    background: url(../images/09.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(10) {
+    background: url(../images/10.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(11) {
+    background: url(../images/11.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(12) {
+    background: url(../images/12.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(13) {
+    background: url(../images/13.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(14) {
+    background: url(../images/14.jpg) 100% 100% no-repeat;
+}
+
+.block:nth-child(15) {
+    background: url(../images/15.jpg) 100% 100% no-repeat;
+}
+
+/* Резина */
+
+/* iPad */
+
+@media (max-width: 1024px) {
+    body {
+        overflow: scroll;
+    }
+    
+    .block {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: scroll;
+    }
+    
+    #header {
+        height: auto;
+    }
+    
+    #header > ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .block {
+        width: 50%;
+    }
+}
+
+
+
+
