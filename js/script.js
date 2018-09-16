@@ -18,5 +18,31 @@ jQuery(document).ready(function() {
     }
   });
 
+  //подобие модалки и переносом данных
+  $('.gallery .block').on('click', function() {
+    $('#overlay').show();
+    $('#gallery-modal').show();
+    var modalImageURL = $(this).find('a').attr('href');
+    if(!modalImageURL){
+      modalImageURL = 'images/01.jpg';
+    }
+    var modalinfo = $(this).find('.info').html();
+    if(!modalinfo){
+      modalinfo = '';
+    }
+    $('#modalImg').attr('src', modalImageURL);
+    $('#modalText').html(modalinfo);
+  });
+
+  $('#gallery-modal .close').on('click', function() {
+    $('#overlay').hide();
+    $('#gallery-modal').hide();
+  });
+
+  $('#overlay').on('click', function() {
+    $('#overlay').hide();
+    $('#gallery-modal').hide();
+  });
+
 
 });
