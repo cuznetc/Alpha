@@ -1,12 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
     transition: .3s;
-}
-
-body {
-    overflow: hidden;
 }
 
 /* Меню */
@@ -116,11 +112,7 @@ body {
 
 /* iPad */
 
-@media (max-width: 1024px) {
-    body {
-        overflow: scroll;
-    }
-    
+@media (max-width: 1024px) {  
     .block {
         width: 25%;
     }
