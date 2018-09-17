@@ -47,3 +47,10 @@ jQuery(document).ready(function() {
 
 
 });
+
+//show and hide menu
+function show() {
+  var header = document.getElementById('header');
+  var show = document.getElementById('show');
+  header.style.height = "auto";
+}

@@ -33,13 +33,13 @@ body {
     background: #ec2e2e;
 }
 
-#header > ul {
+#header > nav > ul {
     display: flex;
-    justify-content: center;
     list-style: none;
+    justify-content: center;
 }
 
-#header > ul > li > a {
+#header > nav >  ul > li > a {
     display: block;
     text-decoration: none;
     font-size: 18px;
@@ -47,7 +47,7 @@ body {
     padding: 17px;
 }
 
-#header > ul > li > a:hover {
+#header > nav > ul > li > a:hover {
     background: #fff;
     color: #000;
 }
@@ -60,15 +60,11 @@ body {
 /* Блоки */
 
 .block {
-    min-width: 250px;
     width: 20%;
     height: 232px;
     overflow: hidden;
-}
-
-.block {
-  background-size: cover;
-  background-position: 50%;
+    background-size: cover;
+    background-position: 50%;
 }
 
 .block > * {
@@ -78,66 +74,6 @@ body {
 
 .block:hover {
     opacity: 0.5;
-}
-
-/*.block:nth-child(1) {
-    background: url(../images/01.jpg) 100% 100% no-repeat;
-}*/
-
-/*.block:nth-child(2) {
-    background: url(../images/02.jpg) 100% 100% no-repeat;
-}*/
-
-.block:nth-child(3) {
-    background: url(../images/03.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(4) {
-    background: url(../images/04.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(5) {
-    background: url(../images/05.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(6) {
-    background: url(../images/06.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(7) {
-    background: url(../images/07.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(8) {
-    background: url(../images/08.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(9) {
-    background: url(../images/09.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(10) {
-    background: url(../images/10.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(11) {
-    background: url(../images/11.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(12) {
-    background: url(../images/12.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(13) {
-    background: url(../images/13.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(14) {
-    background: url(../images/14.jpg) 100% 100% no-repeat;
-}
-
-.block:nth-child(15) {
-    background: url(../images/15.jpg) 100% 100% no-repeat;
 }
 
 /* modal */
@@ -210,31 +146,29 @@ body {
   background-color: #ec2e2e;
 }
 
+.hide {
+  display: none;
+}
+
+.h-auto {
+  height: auto;
+}
 /* Резина */
 
 /* iPad */
 
 @media (max-width: 1024px) {
     .block {
-        width: 25%;
+        width: 33.33%;
     }
 }
 
 @media (max-width: 768px) {
-    body {
-        overflow: scroll;
-    }
+  #header > nav > ul {
+    flex-direction: column;
+  }
 
-    #header {
-        height: auto;
-    }
-
-    #header > ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .block {
-        width: 50%;
-    }
+  .hide {
+    display: block;
+  }
 }
