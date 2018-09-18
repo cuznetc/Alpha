@@ -33,13 +33,13 @@ body {
     background: #ec2e2e;
 }
 
-#header > nav > ul {
+.wrapper > nav {
     display: flex;
     list-style: none;
     justify-content: center;
 }
 
-#header > nav >  ul > li > a {
+.wrapper > nav > li > a {
     display: block;
     text-decoration: none;
     font-size: 18px;
@@ -47,7 +47,7 @@ body {
     padding: 17px;
 }
 
-#header > nav > ul > li > a:hover {
+.wrapper > nav > li > a:hover {
     background: #fff;
     color: #000;
 }
@@ -150,9 +150,6 @@ body {
   display: none;
 }
 
-.h-auto {
-  height: auto;
-}
 /* Резина */
 
 /* iPad */
@@ -164,11 +161,23 @@ body {
 }
 
 @media (max-width: 768px) {
-  #header > nav > ul {
+  .wrapper > nav {
     flex-direction: column;
   }
 
   .hide {
     display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .block {
+    width: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .block {
+    width: 100%;
   }
 }
