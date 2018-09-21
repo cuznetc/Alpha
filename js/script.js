@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
   });
 
   //подобие модалки и переносом данных
-  $('.gallery .block').on('click', function() {
+  $('.gallery .block').on('click', function(e) {
     $('#overlay').show();
     $('#gallery-modal').show();
     var modalImageURL = $(this).find('a').attr('href');
@@ -32,25 +32,30 @@ jQuery(document).ready(function() {
     }
     $('#modalImg').attr('src', modalImageURL);
     $('#modalText').html(modalinfo);
+    e.preventDefault();
   });
 
-  $('#gallery-modal .close').on('click', function(e) {
+  $('#gallery-modal .close, #overlay').on('click', function(e) {
     $('#overlay').hide();
     $('#gallery-modal').hide();
     e.preventDefault();
   });
 
-  $('#overlay').on('click', function() {
-    $('#overlay').hide();
-    $('#gallery-modal').hide();
-  });
 
 
 });
 
+//show/hide menu on jQuery
+$('.gallery-menu').on('click', function(e) {
+  $('.g-menu').toggleClass('open');
+  e.preventDefault();
+
+});
+
+
 //show and hide menu
-function show() {
-  var header = document.getElementById('header');
-  var show = document.getElementById('show');
-  header.style.height = "auto";
-}
+// function show() {
+//   var header = document.getElementById('header');
+//   var show = document.getElementById('show');
+//   header.style.height = "auto";
+// }

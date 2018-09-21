@@ -33,13 +33,13 @@ body {
     background: #ec2e2e;
 }
 
-.wrapper > nav {
+nav {
     display: flex;
     list-style: none;
     justify-content: center;
 }
 
-.wrapper > nav > li > a {
+nav > li > a {
     display: block;
     text-decoration: none;
     font-size: 18px;
@@ -47,7 +47,7 @@ body {
     padding: 17px;
 }
 
-.wrapper > nav > li > a:hover {
+nav > li > a:hover {
     background: #fff;
     color: #000;
 }
@@ -60,11 +60,11 @@ body {
 /* Блоки */
 
 .block {
-    width: 20%;
-    height: 232px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: 50%;
+  width: 20%;
+  height: 232px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50%;
 }
 
 .block > * {
@@ -76,9 +76,49 @@ body {
     opacity: 0.5;
 }
 
+.gallery-menu {
+  height: 1.2em;
+  width: 100%;
+  position: relative;
+  display: block;
+  color: #f2f2f2;
+  padding: 17px;
+  font-size: 18px;
+  position: fixed;
+  background: #ec2e2e;
+}
+.gallery-menu::after {
+  content: '=';
+  position: absolute;
+}
+.g-menu {
+  transition: opacity 0.8s;
+  width: 100%;
+}
+.g-menu.open {
+  height: auto;
+  display: flex;
+  opacity: 1;
+}
+.gallery-close {
+  position: absolute;
+  top:0;
+  right: 0;
+  padding: 0.5em;
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+
 /* modal */
 #overlay {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 #overlay:after {
   position: absolute;
@@ -149,6 +189,9 @@ body {
 .hide {
   display: none;
 }
+.hide-lg {
+  display: none;
+}
 
 /* Резина */
 
@@ -156,7 +199,8 @@ body {
 
 @media (max-width: 1024px) {
     .block {
-        width: 33.33%;
+      width: 33.33%;
+      outline: 2px solid #fff;
     }
 }
 
@@ -168,11 +212,26 @@ body {
   .hide {
     display: block;
   }
+  .hide-lg  {
+    display: block;
+  }
+  .g-menu {
+    height: 0;
+    position: fixed;
+    top:55px;
+    left: 0;
+    background: #ec2e2e;
+    overflow: hidden;
+    opacity: 0;
+  }
 }
 
 @media (max-width: 480px) {
   .block {
     width: 50%;
+  }
+  .block:nth-child(3n) {
+    width: 100%;
   }
 }
 
