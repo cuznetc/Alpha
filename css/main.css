@@ -50,7 +50,7 @@ nav > li > a:hover {
   color: #000;
 }
 
-article {
+section {
   display: flex;
   flex-wrap: wrap;
 }
@@ -243,10 +243,22 @@ article {
   .block:nth-child(3n) {
     width: 100%;
   }
+
+  #gallery-modal {
+    min-width: 0;
+    width: 80%;
+    left: 31.5%;
+  }
 }
 
 @media (max-width: 320px) {
   .block {
     width: 100%;
+  }
+
+  #gallery-modal {
+    min-width: 0;
+    width: 90%;
+    left: 25%;
   }
 }
