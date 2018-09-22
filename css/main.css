@@ -2,18 +2,18 @@
   font-family: 'Furore';
   src: url('../fonts/furore.eot');
   src: url('../fonts/furore?#iefix') format('embedded-opentype'),
-  url('../fonts/furore.woff') format('woff'),
-  url('../fonts/furore.ttf') format('truetype'),
-  url('../fonts/furore.svg#Furore') format('svg');
+    url('../fonts/furore.woff') format('woff'),
+    url('../fonts/furore.ttf') format('truetype'),
+    url('../fonts/furore.svg#Furore') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Furore', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    transition: .3s;
+  margin: 0;
+  padding: 0;
+  font-family: 'Furore', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: .3s;
 }
 
 img {
@@ -24,41 +24,38 @@ body {
   height: 100vh;
 }
 
-
 /* Меню */
-
-#header {
-    width: 100%;
-    height: 56px;
-    background: #ec2e2e;
+header {
+  width: 100%;
+  height: 56px;
+  background: #ec2e2e;
 }
 
 nav {
-    display: flex;
-    list-style: none;
-    justify-content: center;
+  display: flex;
+  list-style: none;
+  justify-content: center;
 }
 
 nav > li > a {
-    display: block;
-    text-decoration: none;
-    font-size: 18px;
-    color: #f2f2f2;
-    padding: 17px;
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #f2f2f2;
+  padding: 17px;
 }
 
 nav > li > a:hover {
-    background: #fff;
-    color: #000;
+  background: #fff;
+  color: #000;
 }
 
-#content {
-    display: flex;
-    flex-wrap: wrap;
+article {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Блоки */
-
 .block {
   width: 20%;
   height: 232px;
@@ -73,7 +70,7 @@ nav > li > a:hover {
 }
 
 .block:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .gallery-menu {
@@ -87,29 +84,32 @@ nav > li > a:hover {
   position: fixed;
   background: #ec2e2e;
 }
+
 .gallery-menu::after {
   content: '=';
   position: absolute;
 }
+
 .g-menu {
   transition: opacity 0.8s;
   width: 100%;
 }
+
 .g-menu.open {
   height: auto;
   display: flex;
   opacity: 1;
 }
+
 .gallery-close {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
   padding: 0.5em;
   color: #fff;
   font-size: 1.5em;
   text-decoration: none;
 }
-
 
 /* modal */
 #overlay {
@@ -120,15 +120,17 @@ nav > li > a:hover {
   width: 100%;
   height: 100vh;
 }
+
 #overlay:after {
   position: absolute;
   top: 0;
-  left:0;
-  bottom:0;
-  right:0;
-  content:'';
-  background-color: rgba(127,127,127,0.8);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: '';
+  background-color: rgba(127, 127, 127, 0.8);
 }
+
 #gallery-modal {
   display: none;
   z-index: 1000;
@@ -146,6 +148,7 @@ nav > li > a:hover {
   overflow: hidden;
   box-shadow: 0 0 20px 0 #555;
 }
+
 .modal-body {
   position: relative;
   display: flex;
@@ -153,17 +156,20 @@ nav > li > a:hover {
   align-items: center;
   height: 100%;
 }
+
 .modal-body .image {
   width: 30%;
   overflow: hidden;
   padding-right: 1em;
 }
+
 .modal-body .info {
   width: 70%;
   overflow-x: auto;
   height: 28vh;
   margin-top: 1em;
 }
+
 .modal-body .close {
   position: absolute;
   top: -1em;
@@ -174,6 +180,7 @@ nav > li > a:hover {
   font-size: 1.5em;
   transition: 0.5s;
 }
+
 .modal-body .close:hover {
   color: #656565;
 }
@@ -182,6 +189,7 @@ nav > li > a:hover {
   width: 0.5rem;
   background-color: #ccc;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #ec2e2e;
 }
@@ -189,19 +197,18 @@ nav > li > a:hover {
 .hide {
   display: none;
 }
+
 .hide-lg {
   display: none;
 }
 
 /* Резина */
-
 /* iPad */
-
 @media (max-width: 1024px) {
-    .block {
-      width: 33.33%;
-      outline: 2px solid #fff;
-    }
+  .block {
+    width: 33.33%;
+    outline: 2px solid #fff;
+  }
 }
 
 @media (max-width: 768px) {
@@ -212,13 +219,15 @@ nav > li > a:hover {
   .hide {
     display: block;
   }
-  .hide-lg  {
+
+  .hide-lg {
     display: block;
   }
+
   .g-menu {
     height: 0;
     position: fixed;
-    top:55px;
+    top: 55px;
     left: 0;
     background: #ec2e2e;
     overflow: hidden;
@@ -230,6 +239,7 @@ nav > li > a:hover {
   .block {
     width: 50%;
   }
+
   .block:nth-child(3n) {
     width: 100%;
   }
