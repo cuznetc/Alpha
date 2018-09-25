@@ -49,13 +49,19 @@ jQuery(document).ready(function() {
 $('.gallery-menu').on('click', function(e) {
   $('.g-menu').toggleClass('open');
   e.preventDefault();
-
 });
 
 
-//show and hide menu
-// function show() {
-//   var header = document.getElementById('header');
-//   var show = document.getElementById('show');
-//   header.style.height = "auto";
-// }
+//show/hide blocks
+var block = 15;
+
+$(".block:not(:lt("+block+"))").hide();
+$(".show-all").on('click', function (e) {
+  e.preventDefault();
+  if( $(".block:eq("+block+")").is(":hidden")) {
+    $(".block:hidden").show();
+  } else {
+    $(".block:not(:lt("+block+"))").hide();
+  };
+});
+

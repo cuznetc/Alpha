@@ -202,12 +202,38 @@ section {
   display: none;
 }
 
+.show-all {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px grey solid;
+  border-bottom: 1px grey solid;
+  cursor: pointer;
+}
+
+.show-all:hover {
+  background: grey;
+  color: #fff;
+}
+
+.hide-b {
+  display: none;
+}
+
+.w-hide {
+  display: block;
+}
+
 /* Резина */
 /* iPad */
 @media (max-width: 1024px) {
   .block {
     width: 33.33%;
     outline: 2px solid #fff;
+  }
+
+  .show-all {
+    display: none;
   }
 }
 
@@ -233,6 +259,10 @@ section {
     overflow: hidden;
     opacity: 0;
   }
+
+  .show-all {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -249,6 +279,10 @@ section {
     width: 80%;
     left: 31.5%;
   }
+
+  .show-all {
+    display: none;
+  }
 }
 
 @media (max-width: 320px) {
@@ -260,5 +294,9 @@ section {
     min-width: 0;
     width: 90%;
     left: 25%;
+  }
+
+  .show-all {
+    display: none;
   }
 }
