@@ -55,6 +55,15 @@ section {
   flex-wrap: wrap;
 }
 
+.gallery {
+  height: 696px;
+  overflow: hidden;
+}
+
+.gallery.open {
+  height: auto;
+}
+
 /* Блоки */
 .block {
   width: 20%;
@@ -203,7 +212,7 @@ section {
 }
 
 .show-all {
-  width: 100%;
+  width: auto;
   text-align: center;
   padding: 10px;
   border-top: 1px grey solid;
@@ -224,6 +233,10 @@ section {
   display: block;
 }
 
+.clearfix {
+  clear: left;
+}
+
 /* Резина */
 /* iPad */
 @media (max-width: 1024px) {
@@ -234,6 +247,10 @@ section {
 
   .show-all {
     display: none;
+  }
+
+  .gallery {
+    height: auto;
   }
 }
 
@@ -263,6 +280,10 @@ section {
   .show-all {
     display: none;
   }
+
+  .gallery {
+    height: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -283,6 +304,10 @@ section {
   .show-all {
     display: none;
   }
+
+  .gallery {
+    height: auto;
+  }
 }
 
 @media (max-width: 320px) {
@@ -298,5 +323,9 @@ section {
 
   .show-all {
     display: none;
+  }
+
+  .gallery {
+    height: auto;
   }
 }

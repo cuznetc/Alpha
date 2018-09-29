@@ -52,8 +52,14 @@ $('.gallery-menu').on('click', function(e) {
 });
 
 
+//show/hide photos in gallery
+$('.show-all').on('click', function(e) {
+  $('.gallery').toggleClass('open');
+  e.preventDefault();
+});
+
 //show/hide blocks
-var block = 15;
+/*var block = 15;
 
 $(".block:not(:lt("+block+"))").hide();
 $(".show-all").on('click', function (e) {
@@ -64,4 +70,4 @@ $(".show-all").on('click', function (e) {
     $(".block:not(:lt("+block+"))").hide();
   };
 });
-
+*/
